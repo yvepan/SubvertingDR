@@ -38,7 +38,7 @@ Copy `.env.example` to `.env` and fill in your credentials, or export them direc
 ```bash
 export OPENAI_API_KEY=your_api_key_here
 export OPENAI_BASE_URL=https://api.openai.com/v1
-export RETRIEVER=duckduckgo
+export RETRIEVER=your_retriever_here
 ```
 
 To reproduce the full batch experiments, point the runners at your dataset:
