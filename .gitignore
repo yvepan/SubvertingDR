@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+outputs/
+local-poison-docs/
+web-poison-docs/
+adversarial_docs/
+*.log
+.claude/
