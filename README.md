@@ -1,4 +1,4 @@
-# Subverting Deep Research
+# FORGE
 
 Code release for the FORGE attack and PRISM evaluation framework.
 The experiment-specific code lives in `forge/`, `prism/`, `defense/`, `experiments/`, and `tools/`.
@@ -18,6 +18,7 @@ GPT Researcher is vendored directly so the artifact reproduces without a conflic
 | `defense/` | Root Query Anchoring (RQA) defense helper |
 | `experiments/` | Stable entry points for depth-sweep and network-condition runs |
 | `tools/` | Document generation, ASR scoring, graph checks, and batch experiment helpers |
+| `graphcheck/` | Graph ASR audit: reads atomic ASR pipeline results and graph files to produce summary tables and statistics |
 | `data/` | Schema examples (`queries.example.json`, `claims.example.csv`) |
 | `docs/` | Implementation notes, ASR scoring guide, and web-poison source-selection details |
 | `UPSTREAM.md` | GPT Researcher attribution and local modification inventory |

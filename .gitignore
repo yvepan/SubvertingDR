@@ -8,3 +8,4 @@ web-poison-docs/
 adversarial_docs/
 *.log
 .claude/
+CLAUDE.md
