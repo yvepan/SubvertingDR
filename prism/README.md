@@ -71,7 +71,7 @@ lab name to avoid collisions.
 python -m prism.run_pipeline \
     --experiment-dir path/to/my_experiment \
     --output-dir     path/to/outputs \
-    --model          gemini-1.5-flash-latest \
+    --model          gemini-3.1-flash-lite \
     --base-url       https://generativelanguage.googleapis.com/v1beta/openai \
     --api-key-env    GOOGLE_API_KEY
 ```
@@ -82,8 +82,8 @@ Use `--matching-model` to run the matching stage with a different (e.g. larger) 
 python -m prism.run_pipeline \
     --experiment-dir path/to/my_experiment \
     --output-dir     path/to/outputs \
-    --model          gemini-1.5-flash-latest \
-    --matching-model gemini-1.5-pro-latest \
+    --model          gemini-3.1-flash-lite \
+    --matching-model gemini-3.1-flash-lite \
     --base-url       https://generativelanguage.googleapis.com/v1beta/openai \
     --api-key-env    GOOGLE_API_KEY
 ```
@@ -95,19 +95,19 @@ Run individual stages independently:
 python -m prism.extract_doc_atomic_claims \
     --data-dir outputs/data --output-dir outputs \
     --trace-dir outputs/llm_traces/extract \
-    --model gemini-1.5-flash-latest --base-url <url> --api-key-env GOOGLE_API_KEY
+    --model gemini-3.1-flash-lite --base-url <url> --api-key-env GOOGLE_API_KEY
 
 # Stage 1b only
 python -m prism.build_query_canonical_claims \
     --data-dir outputs/data --output-dir outputs \
     --trace-dir outputs/llm_traces/canonical \
-    --model gemini-1.5-flash-latest --base-url <url> --api-key-env GOOGLE_API_KEY
+    --model gemini-3.1-flash-lite --base-url <url> --api-key-env GOOGLE_API_KEY
 
 # Stages 2+3 only
 python -m prism.score_report_atomic_asr \
     --data-dir outputs/data --output-dir outputs \
     --trace-dir outputs/llm_traces/score \
-    --model gemini-1.5-flash-latest --base-url <url> --api-key-env GOOGLE_API_KEY
+    --model gemini-3.1-flash-lite --base-url <url> --api-key-env GOOGLE_API_KEY
 ```
 
 ## Output files
@@ -149,5 +149,5 @@ The pipeline expects an OpenAI-compatible chat completions endpoint.  Pass the k
 directly with `--api-key` or store it in an environment variable and use
 `--api-key-env <VAR_NAME>` (default variable name: `PRISM_API_KEY`).
 
-Any OpenAI-compatible provider works.  The paper used Gemini-1.5-Flash-Lite for all
+Any OpenAI-compatible provider works.  The paper used Gemini-3.1-Flash-Lite for all
 three stages, accessed via the Google AI Studio OpenAI-compatibility endpoint.

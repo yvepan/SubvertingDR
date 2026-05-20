@@ -147,7 +147,7 @@ The `prism/` module ships the full three-stage LLM pipeline used in the paper:
 python -m prism.run_pipeline \
   --experiment-dir /path/to/experiment \
   --output-dir     /path/to/outputs \
-  --model          gemini-2.0-flash-lite \
+  --model          gemini-3.1-flash-lite \
   --base-url       https://generativelanguage.googleapis.com/v1beta/openai \
   --api-key-env    GOOGLE_API_KEY
 ```
