@@ -26,7 +26,7 @@ setup(
     packages=find_packages(exclude=exclude_packages),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://anonymous.4open.science/r/SubvertingDR-D8BD",
+    url="https://anonymous.4open.science/r/FORGE-6A67",
     author="FORGE Deep Research Artifact Authors",
     license="Responsible Research Use License",
     classifiers=[
