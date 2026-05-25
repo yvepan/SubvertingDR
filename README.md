@@ -178,8 +178,21 @@ contaminate web-only measurements.
 
 ## Release Boundary
 
-This repository contains the code needed to reproduce the released experiments.
-It does **not** include full adversarial document sets, raw experiment outputs,
-evaluator outputs, or API credentials.
-The `data/` directory holds minimal schema examples only;
-set `FORGE_DATASET_ROOT` to point at the private dataset for full batch reproduction.
+This repository releases the implementation needed to inspect and run the
+released evaluation workflow, including PRISM evaluation, Root Query Anchoring
+(RQA), experiment orchestration, and supporting utilities.
+
+In accordance with the responsible-release policy described in the paper, we
+do not release optimized adversarial document sets, query-specific poisoned
+corpora, automated FORGE document-construction pipelines, or tooling for
+deploying poisoned documents into live retrieval environments.
+
+The `data/` directory contains minimal schema examples only. Full batch
+reproduction of experiments involving the restricted adversarial corpus
+requires access to the withheld private dataset via `FORGE_DATASET_ROOT`.
+
+API credentials, raw model outputs, and evaluator outputs are not included.
+Where possible, we provide aggregate results and configuration files needed
+to inspect the reported evaluation setup.
+
+
